@@ -47,16 +47,21 @@ class SistemaTelefonico {
     public void atualizar(Contato contato) {
         System.out.println("Digite 0 caso queira alterar o nome ou Digite 1 caso queira alterar o numero");
         x = sc.nextInt();
+
+        sc.nextLine();// Limpar o buffer do teclado, tirar o enter
+
         indice = nomes.indexOf(contato.nome);
         switch (x) {
             case 0:
                 System.out.println("Digite o novo nome");
                 newname = sc.nextLine();
                 nomes.set(indice, newname);
+                break;
             case 1:
                 System.out.println("Digite o novo numero");
                 newnumero = sc.nextInt();
                 telefones.set(indice, newnumero);
+                break;
 
         }
     }
@@ -80,6 +85,9 @@ class SistemaTelefonico {
         sistema.cadastrar(c1);
         sistema.cadastrar(c3);
         sistema.cadastrar(c2);
+        sistema.pesquisa("Pai");
+        sistema.atualizar(c3);
+        sistema.pesquisa("Everton");
 
     }
 }

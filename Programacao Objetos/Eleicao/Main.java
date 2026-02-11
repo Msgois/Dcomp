@@ -126,5 +126,6 @@ class UrnaEletrônica {
         urna.votar();
         urna.finalizar();
         urna.apuracao();
+        sc.close();
     }
 }
