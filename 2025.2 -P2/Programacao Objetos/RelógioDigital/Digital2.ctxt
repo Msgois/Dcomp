@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Digital2
+comment1.params=horas\ minutos\ segundos
+comment1.target=Digital2(int,\ int,\ int)
+comment2.params=
+comment2.target=void\ tic()
+comment3.params=novahora\ novominuto\ novosegundo
+comment3.target=void\ ajustar(int,\ int,\ int)
+comment4.params=h\ m\ s
+comment4.target=void\ alarme(int,\ int,\ int)
+comment5.params=
+comment5.target=void\ Quehorass\u00E3o()
+numComments=6

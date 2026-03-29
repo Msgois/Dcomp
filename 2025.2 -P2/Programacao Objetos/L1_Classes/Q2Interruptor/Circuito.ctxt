@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Circuito
+comment1.params=inter1\ inter2
+comment1.target=Circuito(boolean,\ boolean)
+comment2.params=
+comment2.target=void\ offon1()
+comment3.params=
+comment3.target=void\ offon2()
+comment4.params=
+comment4.target=void\ mostrar()
+numComments=5
