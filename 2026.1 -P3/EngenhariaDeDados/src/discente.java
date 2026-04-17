@@ -49,12 +49,15 @@ public record discente(
     }
 }
 /*A classe Functions contém 2 métodos estáticos
--leituraEarray: Realiza a leitura de cada linha do array por meio do FileReader + BufferedReader, utiliza-se o .slipt para
-separar cada coluna, após isso adiciona-se cada respectivo atributo a sua coluna atríbuida, construindo um objeto discente.
-Como essa estrutura está inserida em um loop While, é formada um arrayList contendo cada discente presente no .csv.
--escrevertxt: Realiza a criação de um arquivo txt(discentes.txt) com os dados de cada um dos discentes contidos na arraylist.
-OBS:Foi usado try and Catch em ambos os métodos para o caso de que se ocorresse algum problema na abertura do arquivo .csv
-OBS2:Coloquei um if determinando que somente os discentes com 11 colunas no arquivo serão adicionados no arrayList.
+-leituraEarray: Realiza a leitura de cada linha do arquivo por meio do FileReader + BufferedReader. Utiliza-se o método .split 
+com uma expressão regular (Regex) para separar as colunas; essa Regex específica permite ignorar vírgulas que estejam 
+dentro de aspas, garantindo a integridade dos dados. Após o split, cada atributo é atribuído à sua respectiva coluna para 
+construir um objeto discente. Como essa estrutura está inserida em um loop while, é formada uma ArrayList contendo todos 
+os discentes presentes no .csv.
+-escrevertxt: Realiza a criação de um arquivo txt (discentes.txt) com os dados formatados de cada um dos discentes contidos na ArrayList.
+OBS: Foi usado try-with-resources (Try and Catch) em ambos os métodos para tratar possíveis problemas na abertura ou leitura dos arquivos.
+OBS2: Foi implementado um IF que valida se a linha possui pelo menos 11 colunas antes de tentar instanciar o objeto, evitando erros de índice.
+OBS3: O Regex utilizado `,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)` é um Lookahead que verifica se a vírgula não está cercada por um número ímpar de aspas.
  */
 class Functions{
     public static List<discente> leituraEarray(){
